@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  dev_dc:
+    container_name: netcore
+    command: tail -f /dev/null
+    # build: .
+    image: binacslee/deployment-csharp-dev
+    volumes:
+      - ./:/gitpro
+    ports:
+      - 80:80
