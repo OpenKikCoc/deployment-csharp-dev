@@ -34,7 +34,7 @@ jobs:
           file: ./Dockerfile
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/deployment-csharp-dev
           no-cache: true
-          platforms: linux/amd64,linux/arm64/v8,linux/riscv64
+          platforms: linux/amd64,linux/arm64
           push: true
       -
         name: Image digest

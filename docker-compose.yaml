@@ -3,10 +3,12 @@ version: '3.1'
 services:
   dev_dc:
     container_name: netcore
-    command: tail -f /dev/null
     # build: .
     image: binacslee/deployment-csharp-dev
+    privileged: true
+    environment:
+      - PASSWORD=test
     volumes:
-      - ./:/gitpro
+      - .:/gitpro
     ports:
-      - 80:80
+      - 10000:8443
